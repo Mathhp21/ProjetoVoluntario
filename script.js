@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('estado').value = data.uf;
       } else {
         alert("CEP não encontrado.");
+        ['rua', 'bairro', 'cidade', 'estado'].forEach(id => document.getElementById(id).value = '');
       }
     } catch (err) {
       console.error("Erro:", err);
@@ -43,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("necessidades", JSON.stringify(necessidades));
     alert("Necessidade cadastrada com sucesso!");
     document.getElementById('formNecessidade').reset();
+    mostrarSecao('visualizar');
   });
 
   document.getElementById("campoPesquisa").addEventListener("input", carregarNecessidades);
