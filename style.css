@@ -1,3 +1,75 @@
+/* RESPONSIVIDADE AVANÇADA */
+@media (max-width: 900px) {
+  main {
+    max-width: 98vw;
+    padding: 20px 5px;
+  }
+  .home-conteudo {
+    padding: 1em;
+  }
+  #home h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  #home {
+    height: 40vh;
+    border-radius: 8px;
+  }
+  .home-conteudo {
+    max-width: 95vw;
+    padding: 0.7em;
+  }
+  #home h2 {
+    font-size: 1.5rem;
+  }
+  #home p {
+    font-size: 1rem;
+  }
+  .objetivo-conteudo, .home-conteudo {
+    font-size: 0.98rem;
+  }
+  form {
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1.2em 0.3em;
+  }
+  nav button {
+    font-size: 0.95rem;
+    padding: 10px 8px;
+  }
+  #home {
+    height: 32vh;
+    border-radius: 5px;
+  }
+  .home-conteudo {
+    padding: 0.4em;
+  }
+  #home h2 {
+    font-size: 1.1rem;
+  }
+  #home p {
+    font-size: 0.9rem;
+  }
+  .objetivo-conteudo, .home-conteudo {
+    font-size: 0.93rem;
+  }
+  form {
+    max-width: 100vw;
+    padding: 0 2px;
+  }
+  #listaNecessidades {
+    gap: 10px;
+  }
+}
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
 body {
