@@ -1,118 +1,284 @@
-/* Importando fonte moderna e acessível */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
 body {
   font-family: 'Nunito', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: #f0f4f8;
   color: #333;
   line-height: 1.6;
 }
 
-/* Cabeçalho com cor vibrante e destaque */
+/* HEADER */
 header {
-  background-color: #2E7D32; /* Verde mais forte */
-  padding: 1.5em;
+  position: relative;
+  background-image: url('../voluntarios.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2.5em 1em;
   color: white;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 1000px rgba(46, 125, 50, 0.75); /* overlay verde escuro */
+  user-select: none;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2rem;
+  margin: 0 0 0.5em 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
-/* Navegação com espaçamento e destaque no hover */
-nav a {
-  margin: 0 15px;
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 0.5em;
+}
+
+nav button {
+  font-weight: 700;
   color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  min-width: 120px;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
 }
 
-nav a:hover {
-  color: #FFEB3B; /* Amarelo vibrante */
+nav button:hover {
+  background-color: #FFEB3B;
+  color: #2E7D32;
+  border-color: #FFEB3B;
+  box-shadow: 0 0 15px #FFEB3B;
 }
 
+/* Botão ativo (vamos controlar via JS) */
+nav button.active {
+  background-color: #FFEB3B;
+  color: #2E7D32;
+  border-color: #FFEB3B;
+  box-shadow: 0 0 15px #FFEB3B;
+}
+
+/* MAIN */
 main {
-  padding: 30px 20px;
-  max-width: 1200px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* HOME */
+#home {
+  color: white;
+  background-image: url('../ong.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.45);
+}
+
+.home-conteudo {
+  max-width: 650px;
+  padding: 2em;
+  border-radius: 12px;
+}
+
+#home h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.3em;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+#home p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* FORMULÁRIO */
+form {
+  max-width: 700px;
   margin: auto;
 }
 
-/* Rodapé mais discreto e moderno */
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #2E7D32;
-  color: white;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-}
-
-/* Estilo para cartões (usado em lista de necessidades, por exemplo) */
-.card {
-  background: white;
-  border: 1px solid #ddd;
-  border-left: 5px solid #4CAF50; /* Destaque lateral */
-  border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 20px;
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-  margin-top: 0;
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 12px;
   color: #2E7D32;
 }
 
-/* Formulários com melhor estética */
-input, select, textarea {
+input[type="text"],
+input[type="submit"],
+select,
+textarea {
   width: 100%;
-  padding: 10px;
-  margin: 8px 0 16px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: inherit;
+  padding: 12px 15px;
+  margin-top: 4px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: 'Nunito', sans-serif;
 }
 
-button, input[type="submit"] {
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 8px #4CAF50AA;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input[type="submit"] {
   background-color: #4CAF50;
   color: white;
+  font-weight: 700;
   border: none;
-  padding: 12px 20px;
-  border-radius: 4px;
   cursor: pointer;
-  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  box-shadow: 0 5px 12px #4CAF5080;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-button:hover, input[type="submit"]:hover {
+input[type="submit"]:hover {
   background-color: #388E3C;
+  box-shadow: 0 8px 18px #388E3CAA;
 }
 
-/* Responsivo para dispositivos móveis */
+/* LISTA DE NECESSIDADES */
+#listaNecessidades {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  border-left: 8px solid #4CAF50;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  color: #2E7D32;
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 6px 0;
+  color: #555;
+}
+
+/* Diferenciar borda por tipo ajuda (exemplo básico) */
+.card[data-tipo="Educação"] {
+  border-left-color: #2196F3;
+}
+
+.card[data-tipo="Saúde"] {
+  border-left-color: #E53935;
+}
+
+.card[data-tipo="Meio Ambiente"] {
+  border-left-color: #4CAF50;
+}
+
+.card[data-tipo="Doação de Alimentos"] {
+  border-left-color: #FF9800;
+}
+
+.card[data-tipo="Doação de Roupas"] {
+  border-left-color: #9C27B0;
+}
+
+.card[data-tipo="Outros"] {
+  border-left-color: #607D8B;
+}
+
+/* PESQUISA E FILTRO */
+#campoPesquisa,
+#filtroTipoAjuda {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
+}
+
+#campoPesquisa:focus,
+#filtroTipoAjuda:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 8px #4CAF50AA;
+}
+
+/* RESPONSIVO */
 @media (max-width: 600px) {
   nav {
-    display: flex;
     flex-direction: column;
+    gap: 10px;
   }
 
-  nav a {
-    margin: 10px 0;
+  nav button {
+    min-width: unset;
+    width: 100%;
   }
 
   main {
-    padding: 20px 10px;
+    padding: 20px 15px;
+    margin-bottom: 80px;
+  }
+
+  #home {
+    height: 50vh;
+  }
+
+  #listaNecessidades {
+    grid-template-columns: 1fr;
   }
 }
+
+
 
