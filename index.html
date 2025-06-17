@@ -11,17 +11,20 @@
   <header>
     <h1>Conexão Voluntária</h1>
     <nav>
-      <a href="#" onclick="mostrarSecao('home')">Home</a>
-      <a href="#" onclick="mostrarSecao('cadastro')">Cadastrar</a>
-      <a href="#" onclick="mostrarSecao('visualizar')">Visualizar</a>
+        <button onclick="mostrarSecao('home')">Home</button>
+        <button onclick="mostrarSecao('cadastro')">Cadastrar</button>
+        <button onclick="mostrarSecao('visualizar')">Visualizar</button>
     </nav>
   </header>
 
   <main>
     <section id="home" class="secao">
-      <h2>Bem-vindo à Plataforma!</h2>
-      <p>Conectamos voluntários a ONGs da sua comunidade.</p>
-    </section>
+  <div class="home-conteudo">
+    <h2>Bem-vindo à Plataforma!</h2>
+    <p>Conectamos voluntários a ONGs da sua comunidade.</p>
+  </div>
+</section>
+
 
     <section id="cadastro" class="secao" style="display: none;">
       <h2>Cadastrar Necessidade</h2>
