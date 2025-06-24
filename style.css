@@ -84,7 +84,7 @@ body {
 /* HEADER */
 header {
   position: relative;
-  background-image: url('/voluntarios.jpg');
+  background-image: url('/img/voluntarios.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -155,7 +155,7 @@ main {
 /* HOME */
 #home {
   color: white;
-  background-image: url('../ong.jpg');
+  background-image: url('/img/ong.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
