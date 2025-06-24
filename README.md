@@ -1,4 +1,4 @@
-# Conexão Voluntária
+# Laço Voluntario
 
 Projeto web para conectar voluntários a ONGs e causas sociais da comunidade.
 
@@ -35,7 +35,7 @@ Projeto web para conectar voluntários a ONGs e causas sociais da comunidade.
 - JavaScript
 
 ## Objetivo Social
-O Conexão Voluntária visa fortalecer o terceiro setor, promover o engajamento social e facilitar a transformação positiva de vidas e comunidades por meio do voluntariado.
+O Laço Voluntario visa fortalecer o terceiro setor, promover o engajamento social e facilitar a transformação positiva de vidas e comunidades por meio do voluntariado.
 
 ---
 
