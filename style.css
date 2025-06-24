@@ -84,10 +84,7 @@ body {
 /* HEADER */
 header {
   position: relative;
-  background-image: url('/img/voluntarios.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* Imagem de fundo agora definida no index.html */
   padding: 2.5em 1em;
   color: white;
   text-align: center;
@@ -155,10 +152,7 @@ main {
 /* HOME */
 #home {
   color: white;
-  background-image: url('/img/ong.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* Imagem de fundo agora definida no index.html */
   height: 70vh;
   display: flex;
   justify-content: center;
