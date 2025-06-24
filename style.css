@@ -84,7 +84,7 @@ body {
 /* HEADER */
 header {
   position: relative;
-  background-image: url('../voluntarios.jpg');
+  background-image: url('/voluntarios.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
